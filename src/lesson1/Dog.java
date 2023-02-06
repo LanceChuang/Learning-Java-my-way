@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Dog {
     public int weightInPounds;
 
@@ -17,7 +19,14 @@ public class Dog {
         }
     }
 
+    //  classes may have a mix of static and non-static methods
     public static Dog maxDog(Dog d1, Dog d2) {
+        try {
+            int weight = d1.weightInPounds;
+        } catch (NullPointerException e) {
+            System.out.println("d1 is empty so d1.weightInPounds returns null");
+            throw new NullPointerException();
+        }
         if (d1.weightInPounds > d2.weightInPounds) {
             return d1;
         }
