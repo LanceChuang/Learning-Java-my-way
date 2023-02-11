@@ -10,6 +10,12 @@ public class Main {
 
         System.out.print(Dog.maxDog(dogs[0], dogs[1]));
 
+        Dog poppa = new Dog(10);
+        poppa.bark();
+//        Dog.bark();     // Non-static method 'bark()' cannot be referenced from a static context
+        poppa.runFast();
+        Dog.runFast();
+
         Dog smallDog = new Dog(5);
         Dog mediumDog = new Dog(25);
         Dog hugeDog = new Dog(150);
@@ -25,6 +31,9 @@ public class Main {
             Dog.maxDog(manyDogs[i], mediumDog).makeNoise();
             i = i + 1;
         }
+
+
+
 
     }
 }
